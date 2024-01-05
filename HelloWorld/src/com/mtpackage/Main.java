@@ -4,6 +4,7 @@ import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
 
@@ -92,6 +93,15 @@ public class Main {
         String per = NumberFormat.getPercentInstance().format(0.74);
         System.out.println(per);
 
-        
+//        user input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Your age: ");
+        byte age1 = scanner.nextByte();
+        System.out.println("You are " + age1);
+        scanner.nextLine(); //to read the new line entered previously
+        System.out.print("Your name: ");
+        String name = scanner.nextLine(); //next reads a single token, nextline reads whole line
+        System.out.println("You are " + name);
+
     }
 }
