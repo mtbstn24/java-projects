@@ -1,6 +1,7 @@
 package com.mtpackage;
 
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -61,7 +62,36 @@ public class Main {
         int[][] sameArray = {{1,2,3},{45,3,8}};
         System.out.println(Arrays.deepToString(sameArray));
 
-        //static variable using constants
+//        static variable using constants
         final float PI = 3.14F;
+
+//        arithmetic operations
+        double result = (double)10/(double)5; //explicit casting
+        int num1 = 1;
+        num1 += 2; //augmented or compound assignment operator
+        num1 /= 3;
+
+//        implicit casting
+//        byte > short > int > long
+        short num2 = 1;
+        int num3 = num1 + 2;
+
+//        wrapper class
+        String numStr = "15";
+        System.out.println(Integer.parseInt(numStr));
+
+//        Math class to get rounded random num between 0 to 100
+        double res = Math.round(Math.random() * 100);
+        System.out.println(res);
+
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String res1 = currency.format(123456.789);
+        System.out.println(res1);
+
+//        method chaining, chaining multiple methods together
+        String per = NumberFormat.getPercentInstance().format(0.74);
+        System.out.println(per);
+
+        
     }
 }
