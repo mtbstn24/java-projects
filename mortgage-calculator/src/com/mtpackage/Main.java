@@ -9,14 +9,37 @@ public class Main {
         final byte MONTHS_PER_YEAR = 12;
         final byte PERCENT = 100;
 
+        int principal = 0;
+        float annualInterest = 0;
+        int years = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Principal (Loan) amount : ");
-        int principal = scanner.nextInt();
-        System.out.print("Annual interest rate (%) : ");
-        float annualInterest = scanner.nextFloat();
+
+        while (true){
+            System.out.print("Principal (Loan) amount ($1K - $1M): ");
+            principal = scanner.nextInt();
+            if((principal <= 1_000_000) && (principal >= 1000))
+                break;
+            System.out.println("Enter a value within $1K - $1M");
+        }
+
+        while (true) {
+            System.out.print("Annual interest rate (%) : ");
+            annualInterest = scanner.nextFloat();
+            if (annualInterest > 0)
+                break;
+            System.out.println("Enter a interest rate greater than 0");
+        }
+
         float monthlyInterest = annualInterest/(PERCENT*MONTHS_PER_YEAR);
-        System.out.print("Years to pay : ");
-        int years = scanner.nextInt();
+
+        while (true) {
+            System.out.print("Years to pay (1 - 30): ");
+            years = scanner.nextInt();
+            if (years >= 1 && years <= 30)
+                break;
+            System.out.println("Enter value within 1 to 30");
+        }
+
         int paymentMonths = years*MONTHS_PER_YEAR;
 
         double numerator = monthlyInterest * Math.pow((1+monthlyInterest), paymentMonths);

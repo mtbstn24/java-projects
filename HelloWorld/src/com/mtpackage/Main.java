@@ -170,6 +170,6 @@ public class Main {
         for (String fruit: fruits) {
             System.out.println(fruit);
         }
-        
+
     }
 }
