@@ -103,5 +103,48 @@ public class Main {
         String name = scanner.nextLine(); //next reads a single token, nextline reads whole line
         System.out.println("You are " + name);
 
+//        comparison operators
+        int x1 = 1;
+        int x2 = 2;
+        System.out.println(x != y); //==, >, >=, <=
+
+//        logical operators
+        int temp = 12;
+        boolean isWarm = temp > 20 && temp < 30;
+        System.out.println(isWarm);
+//        OR - ||, NOT - !,
+//        starts from left side to evaluate
+
+//        if statements
+        if (temp > 30) {
+            System.out.println("Hot day");
+            System.out.println("Drink more water");
+        }
+        else if (temp > 20)
+            System.out.println("Beautiful day");
+        else {
+            System.out.println("Cold day");
+        }
+
+//        ternary operator
+        int income = 120_000;
+        String className = income > 100_000 ? "First" : "Economy";
+        System.out.println(income + " " + className);
+
+//        switch statements
+        String role = "admin";
+        switch (role){
+            case "admin":
+                System.out.println("You're admin");
+                break;
+
+            case "moderator":
+                System.out.println("You're moderator");
+                break;
+
+            default:
+                System.out.println("You're guest");
+        }
+
     }
 }
