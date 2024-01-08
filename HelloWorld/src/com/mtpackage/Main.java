@@ -146,5 +146,30 @@ public class Main {
                 System.out.println("You're guest");
         }
 
+//        loops
+        for (int i=0; i<5; i++)
+            System.out.println("Loop print");
+
+        int i=3;
+        while (i>0){
+            System.out.println("while loop");
+            i--;
+        }
+
+//        can't use normal comparison operators with ref type
+
+        do {
+            System.out.println("do while");
+            i++;
+        }while (i>1);
+
+//        while(true) should have break statement
+
+//        foreach loop
+        String[] fruits = {"Apple", "Mango", "Orange"};
+        for (String fruit: fruits) {
+            System.out.println(fruit);
+        }
+        
     }
 }
