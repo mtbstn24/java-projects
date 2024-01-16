@@ -34,7 +34,7 @@ public class Main {
 
         for(int i=0; i<length; i++){
             alpha_pos = a.get(counter).compareTo('a') + 1;
-            for(int j=0; j<=alpha_pos; j++){
+            for(int j=0; j<alpha_pos; j++){
                 a.add(a.get(counter));
             }
             a.remove(counter);
